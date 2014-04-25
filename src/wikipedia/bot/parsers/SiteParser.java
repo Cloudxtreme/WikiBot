@@ -1,4 +1,4 @@
-package wikipedia.bot.parsers;
+﻿package wikipedia.bot.parsers;
 
 import java.net.MalformedURLException;
 import java.net.URL;

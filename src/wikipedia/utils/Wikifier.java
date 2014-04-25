@@ -1,4 +1,4 @@
-package wikipedia.utils;
+п»їpackage wikipedia.utils;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -43,39 +43,39 @@ public final class Wikifier {
 	private static final Map<String, Data> replacements = new HashMap<String, Data>();
 
 	static {
-		replacements.put("древк", new Data("Древко"));
-		replacements.put("щит", new Data("Геральдичний щит"));
-		replacements.put("хрест", new Data("Хрест"));
-		replacements.put("сонц", new Data("Сонце"));
-		replacements.put("шабл", new Data("Шабля"));
-		replacements.put("пернач", new Data("Пернач"));
-		replacements.put("хоругв", new Data("Хоругва"));
-		replacements.put("кадуцей", new Data("Кадуцей"));
-		replacements.put("сніп", new Data("Сніп (в'язка)"));
-		replacements.put("орнамент", new Data("Орнамент"));
-		replacements.put("візерун", new Data("Орнамент"));
-		replacements.put("ромашк", new Data("Ромашка (рід рослин)"));
-		replacements.put("зір", new Data("Зірка"));
-		replacements.put("сноп", new Data("Сніп (в'язка)"));
-		replacements.put("коза", new Data("Козаки"));
-		replacements.put("чапл", new Data("Чапля"));
-		replacements.put("булав", new Data("Булава"));
-		replacements.put("сувій", new Data("Сувій"));
-		replacements.put("колос", new Data("Колосок"));
-		replacements.put("пшениц", new Data("Пшениця"));
-		replacements.put("соняшн", new Data("Соняшник"));
-		replacements.put("якір", new Data("Якір"));
-		replacements.put("трикутн", new Data("трикутник"));
-		replacements.put("дзвін", new Data("Дзвін"));
-		replacements.put("виноград", new Data("Виноград"));
-		replacements.put("дуб", new Data("Дуб"));
-		replacements.put("жолуд", new Data("Жолудь"));
-		replacements.put("ячм", new Data("Ячмінь"));
-		replacements.put("тризуб", new Data("Тризуб"));
-		replacements.put("калин", new Data("Калина"));
-		replacements.put("лавр", new Data("Лавр"));
-		replacements.put("землероб", new Data("Землероб"));
-		replacements.put("хлібороб", new Data("Хлібороб"));
+		replacements.put("РґСЂРµРІРє", new Data("Р”СЂРµРІРєРѕ"));
+		replacements.put("С‰РёС‚", new Data("Р“РµСЂР°Р»СЊРґРёС‡РЅРёР№ С‰РёС‚"));
+		replacements.put("С…СЂРµСЃС‚", new Data("РҐСЂРµСЃС‚"));
+		replacements.put("СЃРѕРЅС†", new Data("РЎРѕРЅС†Рµ"));
+		replacements.put("С€Р°Р±Р»", new Data("РЁР°Р±Р»СЏ"));
+		replacements.put("РїРµСЂРЅР°С‡", new Data("РџРµСЂРЅР°С‡"));
+		replacements.put("С…РѕСЂСѓРіРІ", new Data("РҐРѕСЂСѓРіРІР°"));
+		replacements.put("РєР°РґСѓС†РµР№", new Data("РљР°РґСѓС†РµР№"));
+		replacements.put("СЃРЅС–Рї", new Data("РЎРЅС–Рї (РІ'СЏР·РєР°)"));
+		replacements.put("РѕСЂРЅР°РјРµРЅС‚", new Data("РћСЂРЅР°РјРµРЅС‚"));
+		replacements.put("РІС–Р·РµСЂСѓРЅ", new Data("РћСЂРЅР°РјРµРЅС‚"));
+		replacements.put("СЂРѕРјР°С€Рє", new Data("Р РѕРјР°С€РєР° (СЂС–Рґ СЂРѕСЃР»РёРЅ)"));
+		replacements.put("Р·С–СЂ", new Data("Р—С–СЂРєР°"));
+		replacements.put("СЃРЅРѕРї", new Data("РЎРЅС–Рї (РІ'СЏР·РєР°)"));
+		replacements.put("РєРѕР·Р°", new Data("РљРѕР·Р°РєРё"));
+		replacements.put("С‡Р°РїР»", new Data("Р§Р°РїР»СЏ"));
+		replacements.put("Р±СѓР»Р°РІ", new Data("Р‘СѓР»Р°РІР°"));
+		replacements.put("СЃСѓРІС–Р№", new Data("РЎСѓРІС–Р№"));
+		replacements.put("РєРѕР»РѕСЃ", new Data("РљРѕР»РѕСЃРѕРє"));
+		replacements.put("РїС€РµРЅРёС†", new Data("РџС€РµРЅРёС†СЏ"));
+		replacements.put("СЃРѕРЅСЏС€РЅ", new Data("РЎРѕРЅСЏС€РЅРёРє"));
+		replacements.put("СЏРєС–СЂ", new Data("РЇРєС–СЂ"));
+		replacements.put("С‚СЂРёРєСѓС‚РЅ", new Data("С‚СЂРёРєСѓС‚РЅРёРє"));
+		replacements.put("РґР·РІС–РЅ", new Data("Р”Р·РІС–РЅ"));
+		replacements.put("РІРёРЅРѕРіСЂР°Рґ", new Data("Р’РёРЅРѕРіСЂР°Рґ"));
+		replacements.put("РґСѓР±", new Data("Р”СѓР±"));
+		replacements.put("Р¶РѕР»СѓРґ", new Data("Р–РѕР»СѓРґСЊ"));
+		replacements.put("СЏС‡Рј", new Data("РЇС‡РјС–РЅСЊ"));
+		replacements.put("С‚СЂРёР·СѓР±", new Data("РўСЂРёР·СѓР±"));
+		replacements.put("РєР°Р»РёРЅ", new Data("РљР°Р»РёРЅР°"));
+		replacements.put("Р»Р°РІСЂ", new Data("Р›Р°РІСЂ"));
+		replacements.put("Р·РµРјР»РµСЂРѕР±", new Data("Р—РµРјР»РµСЂРѕР±"));
+		replacements.put("С…Р»С–Р±РѕСЂРѕР±", new Data("РҐР»С–Р±РѕСЂРѕР±"));
 	}
 	
 	private Wikifier() {}

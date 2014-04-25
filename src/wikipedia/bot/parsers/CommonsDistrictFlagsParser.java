@@ -1,4 +1,4 @@
-package wikipedia.bot.parsers;
+п»їpackage wikipedia.bot.parsers;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -42,31 +42,31 @@ public class CommonsDistrictFlagsParser extends SiteParser {
 	private static final String SEPARATOR = System.getProperty("line.separator");
 	
 	static {
-		links.put("АРК", "Crimea");
-		links.put("Черкась", "Cherkasy_Oblast");
-		links.put("Чернігівсь", "Chernihiv_Oblast");
-		links.put("Чернівець", "Chernivtsi_Oblast");
-		links.put("Дніпропетровсь", "Dnipropetrovsk_Oblast");
-		links.put("Донець", "Donetsk_Oblast");
-		links.put("Івано-Франківсь", "Ivano-Frankivsk_Oblast");
-		links.put("Харківсь", "Kharkiv_Oblast");
-		links.put("Херсонсь", "Kherson_Oblast");
-		links.put("Хмельниць", "Khmelnytskyi_Oblast");
-		links.put("Київсь", "Kiev_Oblast");
-		links.put("Кіровоградсь", "Kirovograd_Oblast");
-		links.put("Лугансь", "Luhansk_Oblast");
-		links.put("Львівсь", "Lviv_Oblast");
-		links.put("Миколаївсь", "Mykolaiv_Oblast");
-		links.put("Одесь", "Odessa_Oblast");
-		links.put("Полтавсь", "Poltava_Oblast");
-		links.put("Рівненсь", "Rivne_Oblast");
-		links.put("Сумсь", "Sumy_Oblast");
-		links.put("Тернопільсь", "Ternopil_Oblast");
-		links.put("Вінниць", "Vinnytsia_Oblast");
-		links.put("Волинсь", "Volyn_Oblast");
-		links.put("Запорізь", "Zaporizhzhya_Oblast");
-		links.put("Житомирсь", "Zhytomyr_Oblast");
-		links.put("Закарпатсь", "Zakarpattia_Oblast");
+		links.put("РђР Рљ", "Crimea");
+		links.put("Р§РµСЂРєР°СЃСЊ", "Cherkasy_Oblast");
+		links.put("Р§РµСЂРЅС–РіС–РІСЃСЊ", "Chernihiv_Oblast");
+		links.put("Р§РµСЂРЅС–РІРµС†СЊ", "Chernivtsi_Oblast");
+		links.put("Р”РЅС–РїСЂРѕРїРµС‚СЂРѕРІСЃСЊ", "Dnipropetrovsk_Oblast");
+		links.put("Р”РѕРЅРµС†СЊ", "Donetsk_Oblast");
+		links.put("Р†РІР°РЅРѕ-Р¤СЂР°РЅРєС–РІСЃСЊ", "Ivano-Frankivsk_Oblast");
+		links.put("РҐР°СЂРєС–РІСЃСЊ", "Kharkiv_Oblast");
+		links.put("РҐРµСЂСЃРѕРЅСЃСЊ", "Kherson_Oblast");
+		links.put("РҐРјРµР»СЊРЅРёС†СЊ", "Khmelnytskyi_Oblast");
+		links.put("РљРёС—РІСЃСЊ", "Kiev_Oblast");
+		links.put("РљС–СЂРѕРІРѕРіСЂР°РґСЃСЊ", "Kirovograd_Oblast");
+		links.put("Р›СѓРіР°РЅСЃСЊ", "Luhansk_Oblast");
+		links.put("Р›СЊРІС–РІСЃСЊ", "Lviv_Oblast");
+		links.put("РњРёРєРѕР»Р°С—РІСЃСЊ", "Mykolaiv_Oblast");
+		links.put("РћРґРµСЃСЊ", "Odessa_Oblast");
+		links.put("РџРѕР»С‚Р°РІСЃСЊ", "Poltava_Oblast");
+		links.put("Р С–РІРЅРµРЅСЃСЊ", "Rivne_Oblast");
+		links.put("РЎСѓРјСЃСЊ", "Sumy_Oblast");
+		links.put("РўРµСЂРЅРѕРїС–Р»СЊСЃСЊ", "Ternopil_Oblast");
+		links.put("Р’С–РЅРЅРёС†СЊ", "Vinnytsia_Oblast");
+		links.put("Р’РѕР»РёРЅСЃСЊ", "Volyn_Oblast");
+		links.put("Р—Р°РїРѕСЂС–Р·СЊ", "Zaporizhzhya_Oblast");
+		links.put("Р–РёС‚РѕРјРёСЂСЃСЊ", "Zhytomyr_Oblast");
+		links.put("Р—Р°РєР°СЂРїР°С‚СЃСЊ", "Zakarpattia_Oblast");
 	}
 	
 	/**
@@ -193,7 +193,7 @@ public class CommonsDistrictFlagsParser extends SiteParser {
 				}
 			}
 			// delete "File:" before
-			map.put("МАЛЮНОК", picture.substring(5, picture.length()));
+			map.put("РњРђР›Р®РќРћРљ", picture.substring(5, picture.length()));
 			return map;
 	}
 }

@@ -1,4 +1,4 @@
-package wikipedia.bot.parsers;
+Ôªøpackage wikipedia.bot.parsers;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,11 +24,11 @@ public class GeneralInformationDistrictFlagsParser extends SiteParser {
 	protected Map<String, String> getParams(String text, String[] selectors)
 		throws ApplicationException {
 			Map<String, String> params = new HashMap<String, String>();
-			params.put("À≤Õ 1", selectors[3]);
-			params.put("—‹Œ√ŒƒÕ≤", DateUtils.convertDate(
+			params.put("–õ–Ü–ù–ö1", selectors[3]);
+			params.put("–°–¨–û–ì–û–î–ù–Ü", DateUtils.convertDate(
 				System.currentTimeMillis()));
-			params.put("Œ¡À¿—“‹", selectors[2]);
-			params.put("Õ¿«¬¿", selectors[0]);
+			params.put("–û–ë–õ–ê–°–¢–¨", selectors[2]);
+			params.put("–ù–ê–ó–í–ê", selectors[0]);
 			return params;
 	}
 

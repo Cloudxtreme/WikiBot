@@ -1,4 +1,4 @@
-package wikipedia.utils;
+﻿package wikipedia.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

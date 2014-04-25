@@ -1,4 +1,4 @@
-package wikipedia.bot;
+﻿package wikipedia.bot;
 
 import java.io.IOException;
 import java.util.HashMap;

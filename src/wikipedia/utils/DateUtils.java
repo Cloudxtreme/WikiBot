@@ -1,4 +1,4 @@
-package wikipedia.utils;
+п»їpackage wikipedia.utils;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -10,9 +10,9 @@ import java.util.Date;
  */
 public class DateUtils {
 
-    private static final String[] MONTH = {"січня", "лютого", "березня",
-    	"квітня", "травня", "червня", "липня", "серпня", "вересня", "жовтня",
-    	"листопада", "грудня"};
+    private static final String[] MONTH = {"СЃС–С‡РЅСЏ", "Р»СЋС‚РѕРіРѕ", "Р±РµСЂРµР·РЅСЏ",
+    	"РєРІС–С‚РЅСЏ", "С‚СЂР°РІРЅСЏ", "С‡РµСЂРІРЅСЏ", "Р»РёРїРЅСЏ", "СЃРµСЂРїРЅСЏ", "РІРµСЂРµСЃРЅСЏ", "Р¶РѕРІС‚РЅСЏ",
+    	"Р»РёСЃС‚РѕРїР°РґР°", "РіСЂСѓРґРЅСЏ"};
 
 	private DateUtils() {}
 
@@ -28,7 +28,7 @@ public class DateUtils {
 		sb.append(MONTH[calendar.get(Calendar.MONTH)]);
 		sb.append(' ');
 		sb.append(calendar.get(Calendar.YEAR));
-		sb.append(" р");
+		sb.append(" СЂ");
 		return sb.toString();
 	}
 	

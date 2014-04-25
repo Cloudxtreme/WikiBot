@@ -1,4 +1,4 @@
-package wikipedia.bot.parsers;
+п»їpackage wikipedia.bot.parsers;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -41,8 +41,8 @@ public class HeraldryDistrictFlagsParser extends SiteParser {
 			String[] divided = text.split("\n");
 			for (String current: divided) {
 				// paragraph with general information
-				if (current.contains("р.") &&
-					current.contains("Затверджен")) {
+				if (current.contains("СЂ.") &&
+					current.contains("Р—Р°С‚РІРµСЂРґР¶РµРЅ")) {
 						StringTokenizer st = new StringTokenizer(current, " ");
 						while (st.hasMoreTokens()) {
 							boolean digit = true;
@@ -52,10 +52,10 @@ public class HeraldryDistrictFlagsParser extends SiteParser {
 									digit = false;
 								}
 							}
-							if (token.contains("р.")) {
+							if (token.contains("СЂ.")) {
 								year = token.substring(0, token.length() - 2);
 							}
-							if (!token.contains("№") && digit) {
+							if (!token.contains("в„–") && digit) {
 								number = token;
 							}
 							if (DateUtils.month(token)) {
@@ -64,7 +64,7 @@ public class HeraldryDistrictFlagsParser extends SiteParser {
 						}
 				}
 				// paragraph with description
-				if (current.contains("співвідношення")) {
+				if (current.contains("СЃРїС–РІРІС–РґРЅРѕС€РµРЅРЅСЏ")) {
 					description = current;
 					int index = current.indexOf(':');
 					proportion = current.substring(index - 1, index + 2);
@@ -75,15 +75,15 @@ public class HeraldryDistrictFlagsParser extends SiteParser {
 						if (result != null) {
 							if (color1 == null) {
 								color1 = result + 
-										((result == "син") ? "ій" : "ий");
+										((result == "СЃРёРЅ") ? "С–Р№" : "РёР№");
 							} else {
 								if (color2 == null) {
 									color2 = result + 
-										((result == "син") ? "ій" : "ий");
+										((result == "СЃРёРЅ") ? "С–Р№" : "РёР№");
 								} else {
 									if (color3 == null) {
 										color3 = result + 
-											((result == "син") ? "ій" : "ий");
+											((result == "СЃРёРЅ") ? "С–Р№" : "РёР№");
 									}
 								}
 							}
@@ -91,39 +91,40 @@ public class HeraldryDistrictFlagsParser extends SiteParser {
 					}
 				}
 				// paragraph with literature
-				if (current.contains("Кисляк") && 
-					current.contains("Нескоромний")) {
-						book = "''Україна: герби та прапори'' / авт. проекту"
-							+ " та упор. : В. Г. Кисляк, О. А. Нескоромний. —"
-							+ " К. : Парламентське вид-во, 2010. — 456 с. : "
-							+ "ілюст. — {{ref-uk}} {{ref-ru}} {{ref-en}}";
+				if (current.contains("РљРёСЃР»СЏРє") && 
+					current.contains("РќРµСЃРєРѕСЂРѕРјРЅРёР№")) {
+						book = "''РЈРєСЂР°С—РЅР°: РіРµСЂР±Рё С‚Р° РїСЂР°РїРѕСЂРё'' / Р°РІС‚. РїСЂРѕРµРєС‚Сѓ"
+							+ " С‚Р° СѓРїРѕСЂ. : Р’. Р“. РљРёСЃР»СЏРє, Рћ. Рђ. РќРµСЃРєРѕСЂРѕРјРЅРёР№. вЂ”"
+							+ " Рљ. : РџР°СЂР»Р°РјРµРЅС‚СЃСЊРєРµ РІРёРґ-РІРѕ, 2010. вЂ” 456 СЃ. : "
+							+ "С–Р»СЋСЃС‚. вЂ” {{ref-uk}} {{ref-ru}} {{ref-en}}";
 						/*
-							book = "{{книга"
-								+ " |автор=В. Г. Кисляк, О. А. Нескоромний"
-								+ " |заголовок=Україна: герби та прапори"
-								+ " |місце=К"
-								+ " |видавництво=Парламентське вид-во"
-								+ " |рік=2010"
-								+ " |сторінок= 456"
-								+ "}} — {{ref-uk}} {{ref-ru}} {{ref-en}}";		
-						 */			
+							book = "{{РєРЅРёРіР°"
+								+ " |Р°РІС‚РѕСЂ			=	РљРёСЃР»СЏРє Р’. Р“., РќРµСЃРєРѕСЂРѕРјРЅРёР№ Рћ. Рђ."
+								+ " |Р·Р°РіРѕР»РѕРІРѕРє		=	РЈРєСЂР°С—РЅР°: РіРµСЂР±Рё С‚Р° РїСЂР°РїРѕСЂРё"
+								+ " |РјС–СЃС†Рµ			=	Рљ."
+								+ " |РІРёРґР°РІРЅРёС†С‚РІРѕ	=	РџР°СЂР»Р°РјРµРЅС‚СЃСЊРєРµ РІРёРґ-РІРѕ"
+								+ " |СЂС–Рє			=	2010"
+								+ " |СЃС‚РѕСЂС–РЅРѕРє		=	456"
+								+ " |isbn			=	978-966-611-719-2"
+								+ "}}. {{ref-uk}} {{ref-ru}} {{ref-en}}";		
+						*/			
 					}
 			}
-			map.put("ОПИС", description);
-			map.put("ЧИСЛО", number);
-			map.put("МІСЯЦЬ", month);
-			map.put("РІК", year);
-			map.put("ПРОПОРЦІЇ", proportion);
-			map.put("КНИГА", book);
-			map.put("КОЛІР1", color1);
-			map.put("КОЛІР2", color2);
-			map.put("КОЛІР3", color3);
+			map.put("РћРџРРЎ", description);
+			map.put("Р§РРЎР›Рћ", number);
+			map.put("РњР†РЎРЇР¦Р¬", month);
+			map.put("Р Р†Рљ", year);
+			map.put("РџР РћРџРћР Р¦Р†Р‡", proportion);
+			map.put("РљРќРР“Рђ", book);
+			map.put("РљРћР›Р†Р 1", color1);
+			map.put("РљРћР›Р†Р 2", color2);
+			map.put("РљРћР›Р†Р 3", color3);
 			return map;
 	}
 
 	private static String colour(String colour) {
-		String[] colours = {"жовт", "син", "блакитн", "біл", "помаранчев",
-			"золот", "чорн", "зелен", "червон", "малинов", "коричнев"};
+		String[] colours = {"Р¶РѕРІС‚", "СЃРёРЅ", "Р±Р»Р°РєРёС‚РЅ", "Р±С–Р»", "РїРѕРјР°СЂР°РЅС‡РµРІ",
+			"Р·РѕР»РѕС‚", "С‡РѕСЂРЅ", "Р·РµР»РµРЅ", "С‡РµСЂРІРѕРЅ", "РјР°Р»РёРЅРѕРІ", "РєРѕСЂРёС‡РЅРµРІ"};
 		for (int i = 0; i < colours.length; i++) {
 			if (colour.contains(colours[i])) {
 				return colours[i];

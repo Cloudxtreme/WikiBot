@@ -1,4 +1,4 @@
-package wikipedia.bot;
+﻿package wikipedia.bot;
 
 /**
  * 
