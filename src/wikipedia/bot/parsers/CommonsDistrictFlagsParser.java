@@ -193,7 +193,7 @@ public class CommonsDistrictFlagsParser extends SiteParser {
 				}
 			}
 			// delete "File:" before
-			map.put("ÌÀËŞÍÎÊ", picture.substring(5, picture.length() - 1));
+			map.put("ÌÀËŞÍÎÊ", picture.substring(5, picture.length()));
 			return map;
 	}
 }
