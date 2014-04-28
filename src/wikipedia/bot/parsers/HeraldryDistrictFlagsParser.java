@@ -144,7 +144,7 @@ public class HeraldryDistrictFlagsParser extends SiteParser {
 		if (selectors == null || selectors.length != 4 ||
 			selectors[3] == null || selectors[3].isEmpty()) {
 				throw new ApplicationException(
-					"Wrong selectors in Commons parser!");
+					"Wrong selectors in Heraldry parser!");
 		}
 		return "http://heraldry.com.ua/index.php3?lang=U&context=info&id=" +
 			selectors[3] + "#verh";
