@@ -8,6 +8,7 @@ import wikipedia.bot.parsers.CommonsDistrictFlagsParser;
 import wikipedia.bot.parsers.GeneralInformationDistrictFlagsParser;
 import wikipedia.bot.parsers.HeraldryDistrictFlagsParser;
 import wikipedia.bot.parsers.SiteParser;
+import wikipedia.bot.parsers.WikipediaDistrictFlagsParser;
 import wikipedia.utils.ResourceUtils;
 import wikipedia.utils.Wikifier;
 
@@ -55,7 +56,8 @@ public class Runner {
 		SiteParser[] parsers = {
 			new GeneralInformationDistrictFlagsParser(),
 			new HeraldryDistrictFlagsParser(),
-			new CommonsDistrictFlagsParser()
+			new CommonsDistrictFlagsParser(),
+			new WikipediaDistrictFlagsParser()
 		};
 		String[] selectors = {
 			nameDistrict,
