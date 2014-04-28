@@ -28,7 +28,6 @@ public class DateUtils {
 		sb.append(MONTH[calendar.get(Calendar.MONTH)]);
 		sb.append(' ');
 		sb.append(calendar.get(Calendar.YEAR));
-		sb.append(" р");
 		return sb.toString();
 	}
 	
