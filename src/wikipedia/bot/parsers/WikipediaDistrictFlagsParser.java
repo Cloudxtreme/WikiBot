@@ -24,7 +24,7 @@ public class WikipediaDistrictFlagsParser extends SiteParser {
 	protected Map<String, String> getParams(String text, String[] selectors)
 		throws ApplicationException {
 			Map<String, String> map = new HashMap<String, String>();
-			int index = text.indexOf("ий райо́н — ");
+			int index = text.indexOf("ий райо́н");
 			if (index != -1) {
 				StringBuilder sb = new StringBuilder();
 				char current = text.charAt(index--);
