@@ -53,7 +53,7 @@ public class CommonsDistrictFlagsParser extends SiteParser {
 		links.put("Херсонсь", "Kherson_Oblast");
 		links.put("Хмельниць", "Khmelnytskyi_Oblast");
 		links.put("Київсь", "Kiev_Oblast");
-		links.put("Кіровоградсь", "Kirovograd_Oblast");
+		links.put("Кіровоградсь", "Kirovohrad_Oblast");
 		links.put("Лугансь", "Luhansk_Oblast");
 		links.put("Львівсь", "Lviv_Oblast");
 		links.put("Миколаївсь", "Mykolaiv_Oblast");
